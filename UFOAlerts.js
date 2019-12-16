@@ -1,3 +1,15 @@
+function UFOAlertTrue(){
+    console.log(true);
+    return true;
+}
+
+function UFOAlertFalse(){
+    console.log(false);
+    return false;
+}
+
+function UFOAlertInputValue
+
 var alert= document.createElement("div");
 alert.setAttribute("class", "UFOAlert");
 alert.setAttribute("id","UFOAlert");
@@ -15,16 +27,6 @@ AlertTextBottom.setAttribute("id","UFOAlertBottom");
 function UFOAlertClose(){
     document.getElementById("UFOAlert").style.top ="-200px";
     setTimeout(function(){document.getElementById("UFOAlert").remove();},500);
-}
-
-function UFOAlertTrue(){
-    console.log(true);
-    return true;
-}
-
-function UFOAlertFalse(){
-    console.log(false);
-    return false;
 }
 
 function createButton(text, func, class_of_button ){
