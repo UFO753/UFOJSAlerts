@@ -39,18 +39,39 @@ body{
 
 .UFOAlertBottom{
     background-color: #dbdbdb;
-    text-align: right;
+    text-align: center;
     height:25%;
     width:100%;
     line-height: 25%;
 }
 
-.UFOAlertBottom input{
+.UFOAlertButton{
     background-color: #0afa2a;
     font-size: 110%;
+    float:right;
     border: none;
     border-radius: 10px;
     margin-top: 2%;
     margin-right: 2%;
     margin-bottom: 2%;
+}
+
+.UFOAlertFalseButton{
+    background-color: red;
+    font-size: 110%;
+    border: none;
+    border-radius: 10px;
+    margin-top:2%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.UFOAlertTrueButton{
+    background-color: #0afa2a;
+    font-size: 110%;
+    border: none;
+    border-radius: 10px;
+    margin-top:2%;
+    margin-left: 2%;
+    margin-right: 2%;
 }
