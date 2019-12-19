@@ -1,3 +1,11 @@
+/*
+
+    Author:UFO753
+    Downloaded from: https://github.com/UFO753/UFOJSAlerts
+    Last Update: 19.12.2019 17:38 GMT+1
+
+*/
+
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 body{
@@ -25,6 +33,8 @@ body{
 .UFOAlertMiddle{
     height:50%;
     width:100%;
+    padding-top:2%;
+    padding-left:1%;
 }
 
 .UFOAlertTop{
@@ -43,15 +53,16 @@ body{
     height:25%;
     width:100%;
     line-height: 25%;
+    padding-top:3%;
 }
 
 .UFOAlertButton{
     background-color: #0afa2a;
     font-size: 110%;
+    height:60%;
     float:right;
     border: none;
     border-radius: 10px;
-    margin-top: 2%;
     margin-right: 2%;
     margin-bottom: 2%;
 }
@@ -59,9 +70,9 @@ body{
 .UFOAlertFalseButton{
     background-color: red;
     font-size: 110%;
+    height:60%;
     border: none;
     border-radius: 10px;
-    margin-top:2%;
     margin-left: 2%;
     margin-right: 2%;
 }
@@ -71,7 +82,7 @@ body{
     font-size: 110%;
     border: none;
     border-radius: 10px;
-    margin-top:2%;
+    height:60%;
     margin-left: 2%;
     margin-right: 2%;
 }

@@ -1,27 +1,43 @@
+/*
+
+    Author:UFO753
+    Downloaded from: https://github.com/UFO753/UFOJSAlerts
+    Last Update: 19.12.2019 17:38 GMT+1
+
+*/
+
 function UFOAlertTrue(){
     console.log(true);
+    UFOAlertClose();
     return true;
 }
 
 function UFOAlertFalse(){
     console.log(false);
+    UFOAlertClose();
     return false;
 }
 
-function UFOAlertInputValue
+function UFOAlertInputValue(){
 
-var alert= document.createElement("div");
-alert.setAttribute("class", "UFOAlert");
-alert.setAttribute("id","UFOAlert");
-var AlertTextTop = document.createElement("div");
-AlertTextTop.setAttribute("class", "UFOAlertTop");
-AlertTextTop.setAttribute("id","UFOAlertTop");
-var AlertTextMiddle = document.createElement("div");
-AlertTextMiddle.setAttribute("class", "UFOAlertMiddle");
-AlertTextMiddle.setAttribute("id","UFOAlertMiddle");
-var AlertTextBottom = document.createElement("div");
-AlertTextBottom.setAttribute("class", "UFOAlertBottom");
-AlertTextBottom.setAttribute("id","UFOAlertBottom");
+}
+
+var alert, AlertTextTop, AlertTextBottom;
+function CreateElem(){
+    alert= document.createElement("div");
+    alert.setAttribute("class", "UFOAlert");
+    alert.setAttribute("id","UFOAlert");
+    AlertTextTop = document.createElement("div");
+    AlertTextTop.setAttribute("class", "UFOAlertTop");
+    AlertTextTop.setAttribute("id","UFOAlertTop");
+    AlertTextMiddle = document.createElement("div");
+    AlertTextMiddle.setAttribute("class", "UFOAlertMiddle");
+    AlertTextMiddle.setAttribute("id","UFOAlertMiddle");
+    AlertTextBottom = document.createElement("div");
+    AlertTextBottom.setAttribute("class", "UFOAlertBottom");
+    AlertTextBottom.setAttribute("id","UFOAlertBottom");
+}
+
 
 
 function UFOAlertClose(){
@@ -46,6 +62,7 @@ function UFOAlertCreate(){
 }
 
 function UFOAlert(alert_title,text,button_text){
+    CreateElem();
     var button = createButton(button_text, 'UFOAlertClose()','UFOAlertButton');
     console.log(button);
     if(document.getElementById("UFOAlert")!=null)
@@ -59,6 +76,7 @@ function UFOAlert(alert_title,text,button_text){
 }
 
 function UFOAlertConfirm(alert_title, text, button_false, button_true){
+    CreateElem();
     var button_false = createButton( button_false, 'UFOAlertFalse()', 'UFOAlertFalseButton' );
     var button_true = createButton( button_true, 'UFOAlertTrue()', 'UFOAlertTrueButton' );
     if(document.getElementById("UFOAlert")!=null)
