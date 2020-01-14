@@ -3,7 +3,7 @@
     Author: Wojciech "UFO753" Charkiewicz
     Downloaded from: https://github.com/UFO753/UFOJSAlerts
     Last Update: 19.12.2019 17:38 GMT+1
-
+    Description: 
 */
 
 function UFOAlertTrue(){
@@ -19,10 +19,16 @@ function UFOAlertFalse(){
 }
 
 function UFOAlertInputValue(){
-
+    var input_value =document.getElementById("UFOJSInputField").value;
+    console.log(input_value);
+    UFOAlertClose();
+    return input_value;
 }
 
+/* DO NOT EDIT ANYTHING BELLOW */
+
 var alert, AlertTextTop, AlertTextBottom;
+
 function CreateElem(){
     alert= document.createElement("div");
     alert.setAttribute("class", "UFOAlert");
@@ -54,6 +60,14 @@ function createButton(text, func, class_of_button ){
     return button;
 }
 
+function createInputField(){
+    var field = document.createElement("input");
+    field.type= "text";
+    field.setAttribute("class",'UFOAlertInputField');
+    field.setAttribute("id",'UFOJSInputField');
+    return field;
+}
+
 function UFOAlertCreate(){
     document.body.insertBefore(alert,document.body.firstChild);
     document.getElementById("UFOAlert").appendChild(AlertTextTop);
@@ -71,7 +85,7 @@ function UFOAlert(alert_title,text,button_text){
     AlertTextTop.innerText=alert_title;
     AlertTextMiddle.innerHTML= text;
     UFOAlertCreate();
-    document.getElementById("UFOAlertBottom").appendChild(button);
+    AlertTextBottom.appendChild(button);
     setTimeout(function(){ if(document.getElementById("UFOAlert")!=null){document.getElementById("UFOAlert").style.top ="10px"; }}, 300);
 }
 
@@ -85,7 +99,20 @@ function UFOAlertConfirm(alert_title, text, button_false, button_true){
     AlertTextTop.innerText=alert_title;
     AlertTextMiddle.innerHTML= text;
     UFOAlertCreate();
-    document.getElementById("UFOAlertBottom").appendChild(button_false);
-    document.getElementById("UFOAlertBottom").appendChild(button_true);
+    AlertTextBottom.appendChild(button_false);
+    AlertTextBottom.appendChild(button_true);
+    setTimeout(function(){ if(document.getElementById("UFOAlert")!=null){document.getElementById("UFOAlert").style.top ="10px"; }}, 300);
+}
+
+function UFOAlertInput(alert_title, button_text){
+    CreateElem();
+    if(document.getElementById("UFOAlert")!=null)
+        document.getElementById("UFOAlert").remove();
+    alert.innerText='';
+    AlertTextTop.innerText=alert_title;
+    var button_confirm = createButton( button_text, 'UFOAlertInputValue()','UFOAlertButton');
+    UFOAlertCreate();
+    AlertTextMiddle.appendChild(createInputField());
+    AlertTextBottom.appendChild(button_confirm);
     setTimeout(function(){ if(document.getElementById("UFOAlert")!=null){document.getElementById("UFOAlert").style.top ="10px"; }}, 300);
 }

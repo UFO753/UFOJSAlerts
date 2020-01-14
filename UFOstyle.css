@@ -86,3 +86,8 @@ body{
     margin-left: 2%;
     margin-right: 2%;
 }
+
+.UFOAlertInputField{
+    width: 80%;
+    margin: 10px;
+}
