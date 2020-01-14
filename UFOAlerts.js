@@ -2,7 +2,7 @@
 
     Author: Wojciech "UFO753" Charkiewicz
     Downloaded from: https://github.com/UFO753/UFOJSAlerts
-    Last Update: 19.12.2019 17:38 GMT+1
+    Last Update: 14.01.2020 01:17 GMT+1
     Description: 
 */
 
